@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS QnA</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2>
+      <i>removeEventListener</i>
+    </h2>
+    <ul>
+      <li>
+        Using removeEventListener is essential for proper event management and
+        to avoid potential memory leaks and unexpected behaviors in your
+        applications.
+      </li>
+    </ul>
+    <ol>
+      <li>
+        <b>Cleanup in Event Listeners:</b>
+        <ul>
+          <li>
+            When you add event listeners dynamically (e.g., in response to user
+            interactions or component mounts), you should remove them when they
+            are no longer needed.
+          </li>
+          <li>
+            This is particularly important in Single Page Applications (SPAs)
+            where components may be added and removed frequently.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Avoid Memory Leaks:</b>
+        <ul>
+          <li>
+            If you attach event listeners to DOM elements that may be removed
+            from the document, failing to remove the event listeners can cause
+            memory leaks.
+          </li>
+          <li>
+            Memory leaks occur because the event listeners keep a reference to
+            the DOM elements, preventing them from being garbage collected.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Prevent Duplicate Event Handling:</b>
+        <ul>
+          <li>
+            Adding the same event listener multiple times without removing the
+            previous ones can lead to the same event being handled multiple
+            times, causing unexpected behaviors.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Component Unmounting in Frameworks:</b>
+        <ul>
+          <li>
+            In frameworks like React, you should remove event listeners in the
+            cleanup phase (e.g., in the <b>'useEffect'</b> cleanup function) to
+            ensure that listeners do not persist after the component has
+            unmounted.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Temporary Event Handling:</b>
+        <ul>
+          <li>
+            For temporary event listeners that should only handle an event once
+            or for a limited duration, use <b>'removeEventListener'</b> to
+            ensure they are removed after use.
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <pre>
+      <code>
+        // Function to handle click event 
+        function handleClick() {
+          console.log("Element clicked!"); 
+        } 
+        
+        // Adding event listener 
+        const button = document.getElementById("myButton"); 
+        button.addEventListener("click",handleClick);
+        
+        // Removing event listener
+        button.removeEventListener("click", handleClick);
+      </code>
+    </pre>
+  </body>
+</html>
