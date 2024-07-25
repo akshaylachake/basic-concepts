@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS QnA</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2><i>Explain the CSS Box Model and its components.</i></h2>
+    <p>
+      <b>Answer:</b><br />
+      <img src="./assets/css-box-model.png" /><br />
+      The CSS Box Model is a fundamental concept in CSS that describes how
+      elements are rendered and sized in a web page. It consists of four
+      components: content, padding, border, and margin. The content area is
+      where the actual content of the element is displayed. The padding area
+      surrounds the content and provides space between the content and the
+      border. The border is a line that goes around the padding and content
+      area, and the margin is the space outside the border.
+    </p>
+    <hr />
+    <h2><i>What is CSS specificity, and how is it calculated?</i></h2>
+    <p>
+      <b>Answer:</b><br />
+      CSS specificity is a set of rules that determines which styles should be
+      applied to an element when conflicting styles are present. It is
+      calculated based on the combination of selectors used to target an
+      element.<br />
+
+      <br />Specificity is calculated by assigning weights to different parts of
+      the selector.
+      <b>
+        Inline styles have the highest weight, followed by IDs, classes and
+        pseudo-classes, and elements and pseudo-elements </b
+      >. When multiple selectors have the same weight, the last one encountered
+      in the stylesheet takes precedence.
+    </p>
+    <hr />
+    <h2>
+      <i
+        >Explain the concept of CSS preprocessors and their benefits in CSS
+        development. Provide an example of a popular CSS preprocessor and
+        explain its key features.</i
+      >
+    </h2>
+    <p>
+      <b>Answer:</b><br />
+      CSS preprocessors are tools that extend the capabilities of CSS by adding
+      features like variables, nesting, mixins, and functions. They allow
+      developers to write more modular and maintainable CSS code and provide an
+      abstraction layer on top of raw CSS.<br />
+
+      One popular CSS preprocessor is Sass (Syntactically Awesome Style Sheets).
+      Sass introduces features like variables, nesting, mixins, functions, and
+      more. It provides benefits like code reusability, improved
+      maintainability, easier theming, and more concise and readable code.<br />
+    </p>
+    <pre>
+      <code>
+        $primary-color: #007bff;
+
+        .button {
+          background-color: $primary-color;
+          color: white;
+
+          &:hover {
+            background-color: darken($primary-color, 10%);
+          }
+        }
+      </code>
+    </pre>
+    <hr />
+    <h2>
+      <i
+        >Explain the concept of object-oriented CSS (OOCSS) and how it can
+        improve CSS maintainability and reusability.</i
+      >
+    </h2>
+    <p>
+      <b>Answer:</b><br />
+      Object-oriented CSS (OOCSS) is an approach to writing CSS that focuses on
+      separating structure (objects) from skin (visual styles). It involves
+      creating reusable CSS classes that represent objects or components rather
+      than styling specific elements. <br />
+
+      By separating structure and skin, OOCSS promotes code reusability and
+      maintainability. Objects can be reused across different elements, reducing
+      code duplication. Skin classes provide visual styles and can be applied to
+      multiple objects, allowing for consistent styling across the website or
+      application.<br />
+
+      OOCSS also enables easier updates and modifications. By isolating
+      structure and skin, changes to the visual styles can be made without
+      affecting the underlying structure or layout, making maintenance and
+      updates more efficient.<br />
+    </p>
+    <hr />
+    <h2>
+      <i>
+        Explain the concept of responsive web design and the techniques used to
+        achieve it.
+      </i>
+    </h2>
+    <p>
+      <b>Answer:</b><br />
+      Responsive web design is an approach to building websites that ensures
+      optimal user experience across different devices and screen sizes. It
+      involves designing and developing websites that automatically adapt their
+      layout, content, and functionality based on the device’s capabilities and
+      screen size.
+      <br />
+      The key techniques used in responsive web design include:
+    </p>
+    <ul>
+      <li>
+        Fluid Grids: Designing layouts based on relative units (e.g.,
+        percentages) rather than fixed units (e.g., pixels) to allow elements to
+        scale proportionally.
+      </li>
+      <li>
+        Flexible Images: Using CSS techniques like max-width: 100% to ensure
+        images adapt to the container size and avoid overflowing or distorting
+        the layout.
+      </li>
+      <li>
+        Media Queries: Applying different CSS styles based on the device’s
+        characteristics (e.g., screen width, device orientation) using media
+        queries.
+      </li>
+      <li>
+        Breakpoints: Defining specific screen widths at which the layout should
+        change to accommodate different devices, and applying appropriate CSS
+        rules accordingly.
+      </li>
+      <li>
+        Mobile-First Approach: Designing and developing websites starting from
+        the mobile layout and progressively enhancing the experience for larger
+        screens.
+      </li>
+    </ul>
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closures</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2><i>Closures</i></h2>
+    <ul>
+      <li>
+        Closures in JavaScript are functions that have access to variables from
+        their outer lexical environment, even after the outer function has
+        finished executing. Closures “remember” the environment in which they
+        were created.
+      </li>
+    </ul>
+    <script>
+      function createCounter(n) {
+        let count = n;
+
+        function increment() {
+          count++;
+        }
+        return function closuer() {
+          console.log("Parent variable " + count);
+          increment();
+          console.log("Parent variable after increment " + count);
+        };
+      }
+
+      const counter = createCounter(5);
+      counter();
+    </script>
+  </body>
+</html>

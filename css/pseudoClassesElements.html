@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-Classes vs Pseudo-Elements</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2><i>Pseudo-Classes</i></h2>
+    <ul>
+      <li>
+        Definition: Pseudo-classes are used to define the special states of an
+        element.
+      </li>
+
+      <li>Syntax: Pseudo-classes are prefixed with a colon (:).</li>
+
+      <li>
+        Usage Examples:
+        <h4>Structural Pseudo-Classes:</h4>
+        <ul>
+          <li>:root: Selects the document's root element.</li>
+          <li>:nth-child(n): Selects the nth child of a parent element.</li>
+          <li>
+            :nth-last-child(n): Selects the nth child from the end of a parent
+            element.
+          </li>
+          <li>
+            :nth-of-type(n): Selects the nth element of its type among its
+            siblings.
+          </li>
+          <li>
+            :nth-last-of-type(n): Selects the nth element of its type from the
+            end among its siblings.
+          </li>
+          <li>:first-child: Selects the first child of a parent element.</li>
+          <li>:last-child: Selects the last child of a parent element.</li>
+          <li>
+            :first-of-type: Selects the first element of its type among its
+            siblings.
+          </li>
+          <li>
+            :last-of-type: Selects the last element of its type among its
+            siblings.
+          </li>
+          <li>
+            :only-child: Selects an element that is the only child of its
+            parent.
+          </li>
+          <li>
+            :only-of-type: Selects an element that is the only one of its type
+            among its siblings.
+          </li>
+          <li>
+            :empty: Selects elements that have no children (including text
+            nodes).
+          </li>
+        </ul>
+        <h4>State Pseudo-Classes:</h4>
+        <ul>
+          <li>
+            :hover: Selects elements when the user designates them with a
+            pointing device.
+          </li>
+          <li>
+            :active: Selects elements when they are being activated by the user.
+          </li>
+          <li>:focus: Selects elements that have focus.</li>
+          <li>
+            :focus-visible: Selects elements that have focus and meet specific
+            criteria for being visible.
+          </li>
+          <li>
+            :focus-within: Selects elements that have focus within it or its
+            descendants.
+          </li>
+          <li>
+            :checked: Selects elements that are checked (e.g., checkboxes or
+            radio buttons).
+          </li>
+          <li>
+            :indeterminate: Selects elements that are in an indeterminate state
+            (e.g., checkboxes that are neither checked nor unchecked).
+          </li>
+          <li>:disabled: Selects elements that are disabled.</li>
+          <li>:enabled: Selects elements that are enabled.</li>
+          <li>:read-only: Selects elements that are read-only.</li>
+          <li>:read-write: Selects elements that are editable.</li>
+          <li>
+            :default: Selects elements that are the default among a group of
+            similar elements.
+          </li>
+          <li>:required: Selects elements that are required.</li>
+          <li>:optional: Selects elements that are optional.</li>
+          <li>:valid: Selects elements that have valid values.</li>
+          <li>:invalid: Selects elements that have invalid values.</li>
+          <li>
+            :in-range: Selects elements with values within a specified range.
+          </li>
+          <li>
+            :out-of-range: Selects elements with values outside a specified
+            range.
+          </li>
+          <li>
+            :placeholder-shown: Selects input elements that are showing
+            placeholder text.
+          </li>
+          <li>
+            :target: Selects the current active target element (usually
+            specified by the fragment identifier in the URL).
+          </li>
+          <li>:blank: Selects elements with no user input.</li>
+          <li>:visited: Selects links that the user has already visited.</li>
+          <li>:link: Selects links that the user has not visited.</li>
+          <li>:local-link: Selects links to the current document.</li>
+        </ul>
+        <h4>Miscellaneous Pseudo-Classes:</h4>
+        <ul>
+          <li>
+            :not(selector): Selects elements that do not match the given
+            selector.
+          </li>
+          <li>
+            :lang(language): Selects elements with a specific language
+            attribute.
+          </li>
+          <li>:any-link: Selects all links.</li>
+          <li>
+            :is(selector): Selects elements that match any selector in a list of
+            selectors.
+          </li>
+          <li>:where(selector): Similar to :is but without specificity.</li>
+        </ul>
+      </li>
+    </ul>
+    <pre><code>
+      /* Changes the background color of a button when hovered */
+      button:hover {
+          background-color: blue;
+      }
+
+      /* Changes the color of a link when it is focused */
+      a:focus {
+          color: red;
+      }
+
+      /* Selects every second list item */
+      li:nth-child(2n) {
+          background-color: gray;
+      }
+    </code></pre>
+    <hr />
+    <h2><i>Pseudo-Elements</i></h2>
+    <ul>
+      <li>
+        Definition: Pseudo-elements are used to style specific parts of an
+        element. They allow you to apply styles to parts of the content of an
+        element.
+      </li>
+      <li>
+        Syntax: Pseudo-elements are prefixed with a double colon (::). Older
+        versions of CSS used a single colon (:), which is still supported for
+        backward compatibility.
+      </li>
+      <li>
+        Usage Examples:
+        <ul>
+          <li>::before : Inserts content before the content of an element.</li>
+          <li>::after : Inserts content after the content of an element.</li>
+          <li>
+            ::first-line : Applies styles to the first line of a block-level
+            element.
+          </li>
+          <li>
+            ::first-letter : Applies styles to the first letter of a block-level
+            element.
+          </li>
+          <li>
+            ::selection : Applies styles to the portion of an element that has
+            been selected by the user.
+          </li>
+          <li>
+            ::placeholder : Styles the placeholder text of an input field.
+          </li>
+          <li>::marker : Styles the marker box of a list item.</li>
+          <li>
+            ::backdrop : Styles the backdrop of an element, typically used with
+            modal elements.
+          </li>
+          <li>
+            ::slotted(selector) : Selects elements that are distributed to a
+            slot inside a shadow tree.
+          </li>
+          <li>
+            ::part(name) : Selects part of an element defined by a part
+            attribute in Shadow DOM.
+          </li>
+          <li>::cue : Selects WebVTT cues in a &lt;track&gt; element.</li>
+        </ul>
+      </li>
+    </ul>
+    <pre>
+      <code>
+        /* Adds content before a paragraph */
+        p::before {
+            content: "Note: ";
+            font-weight: bold;
+        }
+
+        /* Adds content after a paragraph */
+        p::after {
+            content: " Read more...";
+            color: blue;
+        }
+
+        /* Styles the first line of a paragraph */
+        p::first-line {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        /* Styles the first letter of a paragraph */
+        p::first-letter {
+            font-size: 2em;
+            color: red;
+        }
+      </code>
+    </pre>
+    <hr />
+  </body>
+</html>

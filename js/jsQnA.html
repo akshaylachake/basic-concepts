@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS QnA</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2>
+      <i
+        >Explain the purpose of the querySelector method in JavaScript, and
+        provide an example of how to use it.</i
+      >
+    </h2>
+    <p>
+      <b>Answer:</b><br />
+      The querySelector method in JavaScript allows you to select elements from
+      the DOM using CSS-style selectors. It returns the first element that
+      matches the selector. Here’s an example:
+    </p>
+
+    <pre><code>
+      const element = document.querySelector(".my-class");
+    </code></pre>
+    <p>
+      This example selects the first element with the class “my-class” and
+      assigns it to the element variable.
+    </p>
+    <hr />
+    <h2>
+      <i
+        >Explain the concept of event handling in JavaScript and provide an
+        example of attaching an event listener to a button.</i
+      >
+    </h2>
+    <p>
+      <b>Answer:</b><br />
+      In JavaScript, event handling involves responding to user actions or
+      events triggered by the browser. Event listeners are functions that listen
+      for specific events and execute code in response. Here’s an example of
+      attaching an event listener to a button:
+    </p>
+
+    <pre>
+      <code> 
+        &lt;button id="myButton"&gt;Click me&lt;/button&gt;
+        
+        const button = document.getElementById("myButton");
+
+        button.addEventListener("click", () => {
+          console.log("Button clicked!");
+        });
+      </code>
+    </pre>
+    <p>
+      In this example, the event listener is attached to the button element with
+      the id “myButton.” When the button is clicked, the anonymous arrow
+      function is executed, and it logs “Button clicked!” to the console.
+    </p>
+    <hr />
+  </body>
+</html>
