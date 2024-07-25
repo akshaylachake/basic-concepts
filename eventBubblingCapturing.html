@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling & Capturing</title>
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2><i>Event Bubbling</i></h2>
+    <ul>
+      <li>
+        Definition: Event bubbling means that the event starts from the target
+        element and then bubbles up to its ancestors in the DOM hierarchy.
+      </li>
+      <li>
+        Order: From the innermost target element (where the event occurred) to
+        the outer elements.
+      </li>
+      <li>
+        Default Phase: By default, event listeners in JavaScript use event
+        bubbling.
+      </li>
+    </ul>
+    <div id="outerDiv">
+      <div id="innerDiv">
+        <button id="myButton">Click for Event Bubbling</button>
+      </div>
+    </div>
+    <h2><i>Event Capturing (Trickling)</i></h2>
+    <ul>
+      <li>
+        Definition: Event capturing (also known as trickling) means that the
+        event starts from the outermost element and then propagates down to the
+        target element.
+      </li>
+      <li>Order: From the outer elements to the innermost target element.</li>
+      <li>
+        Usage: To use event capturing, the <b>'addEventListener'</b> method
+        accepts a third boolean parameter which, when set to <b>'true'</b>,
+        makes the event listener execute in the capturing phase.
+      </li>
+      <li>Event Capturing has high priority</li>
+    </ul>
+    <div id="outerDiv2">
+      <div id="innerDiv2">
+        <button id="myButton2">Click for Event Capturing</button>
+      </div>
+    </div>
+    <script>
+      // event bubbling
+      document.getElementById("outerDiv").addEventListener("click", () => {
+        console.log("Outer Div");
+      });
+      document.getElementById("innerDiv").addEventListener("click", () => {
+        console.log("Inner Div");
+      });
+      document.getElementById("myButton").addEventListener("click", () => {
+        console.log("My Button");
+      });
+
+      // event Capturing
+      document.getElementById("outerDiv2").addEventListener(
+        "click",
+        () => {
+          console.log("Outer Div");
+        },
+        true
+      );
+      document.getElementById("innerDiv2").addEventListener(
+        "click",
+        () => {
+          console.log("Inner Div");
+        },
+        true
+      );
+      document.getElementById("myButton2").addEventListener(
+        "click",
+        () => {
+          console.log("My Button");
+        },
+        true
+      );
+    </script>
+  </body>
+</html>
