@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2><i>OOP</i></h2>
+    <ul>
+      <li>
+        Object-Oriented Programming (OOP) in JavaScript is a programming
+        paradigm that uses objects and classes to organize and structure code.
+        JavaScript supports OOP concepts, allowing developers to create reusable
+        and maintainable code. Here’s a brief overview of OOP concepts in
+        JavaScript:
+      </li>
+    </ul>
+    <h3>Key Concepts of OOP in JavaScript</h3>
+    <ul>
+      <li>Classes and Objects</li>
+      <li>Inheritance</li>
+      <li>Encapsulation</li>
+      <li>Abstraction</li>
+      <li>Polymorphism</li>
+    </ul>
+    <ol>
+      <li>
+        Classes and Objects
+        <ul>
+          <li>
+            Class: A blueprint for creating objects. It defines properties and
+            methods that the objects created from the class will have.
+          </li>
+          <li>
+            Object: An instance of a class. It contains data (properties) and
+            functions (methods) defined in the class.
+          </li>
+        </ul>
+        <pre><code>
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            // Method
+            greet() {
+                console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+            }
+        }
+
+        // Create an object
+        const person1 = new Person("Alice", 30);
+        person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.
+        </code></pre>
+      </li>
+      <li>
+        Inheritance
+        <ul>
+          <li>
+            Inheritance allows a class to inherit properties and methods from
+            another class. This promotes code reuse.
+          </li>
+        </ul>
+        <pre><code>
+        Copy code
+        // Define a base class
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+
+            speak() {
+                console.log(`${this.name} makes a sound.`);
+            }
+        }
+
+        // Define a derived class
+        class Dog extends Animal {
+            speak() {
+                console.log(`${this.name} barks.`);
+            }
+        }
+
+        const dog = new Dog("Buddy");
+        dog.speak(); // Output: Buddy barks.
+        </code></pre>
+      </li>
+      <li>
+        Encapsulation
+        <ul>
+          <li>
+            The process of wrapping properties and functions within a single
+            unit is known as encapsulation.
+          </li>
+        </ul>
+        <pre><code>
+          class Car {
+              constructor(model, year) {
+                  this.model = model;
+                  this.year = year;
+                  let mileage = 0; // Private field
+
+                  this.drive = function(distance) {
+                      mileage += distance;
+                      console.log(`Driving ${distance} miles. Total mileage: ${mileage}`);
+                  };
+              }
+
+              getDetails() {
+                  console.log(`Model: ${this.model}, Year: ${this.year}`);
+              }
+          }
+
+          const myCar = new Car("Toyota", 2020);
+          myCar.drive(50); // Output: Driving 50 miles. Total mileage: 50
+          myCar.getDetails(); // Output: Model: Toyota, Year: 2020
+        </code></pre>
+      </li>
+
+      <li>
+        Abstraction
+        <ul>
+          <li>
+            Abstraction means displaying only essential information and hiding
+            the details. Data abstraction refers to providing only essential
+            information about the data to the outside world, hiding the
+            background details or implementation.
+          </li>
+        </ul>
+        <pre><code>
+        class CoffeeMachine {
+            makeCoffee() {
+                this._boilWater();
+                this._brewCoffee();
+                console.log("Coffee is ready!");
+            }
+
+            _boilWater() {
+                console.log("Boiling water...");
+            }
+
+            _brewCoffee() {
+                console.log("Brewing coffee...");
+            }
+        }
+
+        const myCoffeeMachine = new CoffeeMachine();
+        myCoffeeMachine.makeCoffee();
+        // Output:
+        // Boiling water...
+        // Brewing coffee...
+        // Coffee is ready!
+        </code></pre>
+      </li>
+      <li>
+        Polymorphism
+        <ul>
+          <li>
+            Polymorphism means the same function with different signatures is
+            called many times. i.e. <b>overriding</b>
+          </li>
+        </ul>
+        <pre><code>
+          class Shape {
+                draw() {
+                    console.log("Drawing a shape.");
+                }
+            }
+
+            class Circle extends Shape {
+                draw() {
+                    console.log("Drawing a circle.");
+                }
+            }
+
+            class Square extends Shape {
+                draw() {
+                    console.log("Drawing a square.");
+                }
+            }
+
+            const shapes = [new Circle(), new Square()];
+            shapes.forEach(shape => shape.draw());
+            // Output:
+            // Drawing a circle.
+            // Drawing a square.
+        </code></pre>
+      </li>
+    </ol>
+  </body>
+</html>
