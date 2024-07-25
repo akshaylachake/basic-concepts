@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best Practices</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2><i>Best Practices</i></h2>
+    <h3>JavaScript</h3>
+    <ol>
+      <li>
+        Code Organization
+        <ul>
+          <li>Use modules and namespaces to organize code.</li>
+          <li>Keep related functions and variables together.</li>
+        </ul>
+      </li>
+      <li>
+        Naming Conventions
+        <ul>
+          <li>Use camelCase for variables and functions.</li>
+          <li>Use PascalCase for classes and constructors.</li>
+          <li>Use meaningful and descriptive names.</li>
+        </ul>
+      </li>
+      <li>
+        Avoid Global Variables
+        <ul>
+          <li>Use const and let instead of var.</li>
+          <li>
+            Encapsulate code within functions or modules to avoid polluting the
+            global namespace.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Use Strict Mode
+        <ul>
+          <li>
+            Enable strict mode to catch common mistakes.
+            <pre><code>
+            'use strict';
+            </code></pre>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Error Handling
+        <ul>
+          <li>
+            Use try...catch blocks for error-prone code.
+            <pre><code>
+            try {
+                // code
+            } catch (error) {
+                console.error(error);
+            }
+            </code></pre>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Code Comments
+        <ul>
+          <li>Use comments to explain complex logic.</li>
+          <li>Keep comments concise and relevant.</li>
+        </ul>
+      </li>
+      <li>
+        Consistency
+        <ul>
+          <li>Follow a consistent coding style.</li>
+          <li>Use linters (e.g., ESLint) to enforce style guidelines.</li>
+        </ul>
+      </li>
+      <li>
+        Performance Optimization
+        <ul>
+          <li>Avoid unnecessary loops and calculations.</li>
+          <li>
+            Use debouncing and throttling for performance-heavy operations.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Security
+        <ul>
+          <li>Avoid using eval().</li>
+          <li>
+            Validate and sanitize user inputs to prevent XSS and injection
+            attacks.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Modern JavaScript
+        <ul>
+          <li>Features Use ES6+ features like arrow functions,</li>
+          <li>destructuring, template literals, and async/await.</li>
+        </ul>
+      </li>
+    </ol>
+    <h3>CSS</h3>
+    <ol>
+      <li>
+        Organize CSS
+        <ul>
+          <li>
+            Use a consistent structure: reset, base styles, layout, components,
+            utilities.
+          </li>
+          <li>
+            Separate CSS into different files for better management (e.g.,
+            main.css, layout.css, components.css).
+          </li>
+        </ul>
+      </li>
+      <li>
+        Naming Conventions
+        <ul>
+          <li>
+            Use BEM (Block Element Modifier) methodology for naming classes.
+            <pre><code>
+            .block {}
+            .block__element {}
+            .block--modifier {}
+            </code></pre>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Avoid Inline Styles
+        <ul>
+          <li>
+            Keep styles in CSS files, not inline or in the &lt;style&gt; tag.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        Use Shorthand Properties
+        <ul>
+          <li>
+            Use CSS shorthand properties for conciseness.
+            <pre><code>
+            margin: 10px 20px 30px 40px;
+            </code></pre>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Responsive Design
+        <ul>
+          <li>
+            Use media queries to ensure your design is responsive.
+            <pre><code>
+            @media (max-width: 600px) {
+                /* styles */
+            }</code></pre>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Use CSS Variables
+        <ul>
+          <li>
+            Use CSS custom properties (variables) for consistent theming.
+            <pre><code>
+            :root {
+                --main-color: #3498db;
+            }
+            .element {
+                color: var(--main-color);
+            }
+            </code></pre>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Minimize CSS
+        <ul>
+          <li>Remove unused CSS.</li>
+          <li>Minify CSS files for production.</li>
+        </ul>
+      </li>
+      <li>
+        Performance Optimization
+        <ul>
+          <li>
+            Use CSS animations and transitions instead of JavaScript where
+            possible.
+          </li>
+          <li>Limit the use of expensive selectors (e.g., *, :nth-child).</li>
+        </ul>
+      </li>
+    </ol>
+    <h3>HTML</h3>
+    <ol>
+      <li>
+        Semantic HTML
+        <ul>
+          <li>
+            Use semantic elements (&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;,
+            &lt;article&gt;, &lt;footer&gt;) to improve readability and
+            accessibility.
+            <pre><code>
+            &lt;header&gt;&lt;/header&gt;
+            &lt;main&gt;&lt;/main&gt;
+            &lt;footer&gt;&lt;/footer&gt;
+            </code></pre>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Structure
+        <ul>
+          <li>Organize HTML with clear and logical structure.</li>
+          <li>Use comments to explain sections if necessary.</li>
+        </ul>
+      </li>
+      <li>
+        Accessibility
+        <ul>
+          <li>Use ARIA roles and attributes to enhance accessibility.</li>
+          <li>
+            Ensure proper use of alt attributes for images.
+            <pre><code>
+            &lt;img src="image.jpg" alt="Description of image"&gt;
+            </code></pre>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Validation
+        <ul>
+          <li>
+            Ensure HTML is well-formed and validates against the W3C validator.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Meta Tags
+        <ul>
+          <li>
+            Include meta tags for viewport, description, keywords, and character
+            set.
+            <pre><code>
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            </code></pre>
+          </li>
+        </ul>
+      </li>
+      <li>
+        External Resources
+        <ul>
+          <li>
+            Link CSS and JavaScript externally for better maintainability.
+            <pre><code>
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;script src="scripts.js" defer&gt;&lt/script&gt;
+            </code></pre>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Avoid Deprecated Tags
+        <ul>
+          <li>
+            Avoid using outdated or deprecated tags like &lt;font&gt;,
+            &lt;center&gt;, etc.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Forms
+        <ul>
+          <li>
+            Use appropriate input types and validation attributes.
+            <pre><code>
+            &lt;input type="email" required&gt;
+            </code></pre>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Minimize Inline JavaScript
+        <ul>
+          <li>Avoid inline JavaScript; keep it in separate JS files.</li>
+        </ul>
+      </li>
+    </ol>
+  </body>
+</html>
