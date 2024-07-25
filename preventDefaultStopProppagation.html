@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.preventDefault(); & e.stopPropagation();</title>
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2><i>e.preventDefault();</i></h2>
+    <ul>
+      <li>
+        Purpose: Prevents the default action associated with the event from
+        being executed.
+      </li>
+      <li>
+        Use Case: When you want to disable the default behavior of an element,
+        such as preventing a form from submitting or a link from navigating.
+      </li>
+    </ul>
+    <div id="outerDiv">
+      <a href="/" id="link"><< Go Back</a>
+    </div>
+    <h2><i>e.stopPropagation();</i></h2>
+    <ul>
+      <li>
+        Purpose: Stops the event from propagating or bubbling up to parent
+        elements.
+      </li>
+      <li>
+        Use Case: When you want an event to be handled only at a specific
+        element and prevent it from being passed on to any parent elements.
+      </li>
+    </ul>
+    <div id="outerDiv2">
+      <button id="myButton2">Click for Event</button>
+    </div>
+    <h2><i>e.stopImmediatePropagation();</i></h2>
+    <ul>
+      <li>
+        Purpose: Stops the event from propagating (bubbling up) to parent
+        elements and also prevents other event listeners on the same element
+        from being executed.
+      </li>
+      <li>
+        Scope: Affects both the propagation of the event to parent elements and
+        other event listeners on the same element.
+      </li>
+    </ul>
+    <div id="outerDiv3">
+      <button id="myButton3">Click for Event</button>
+    </div>
+    <script>
+      // e.preventDefault()
+      document.getElementById("link").addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log("Prevented from being redirect");
+      });
+
+      // e.stopPropagation()
+      document.getElementById("outerDiv2").addEventListener("click", (e) => {
+        console.log("Outer Div 2");
+      });
+
+      document.getElementById("myButton2").addEventListener("click", (e) => {
+        e.stopPropagation();
+        console.log(
+          "My Button 2, 1st Listener. Prevented Parent Listener from trigger"
+        );
+      });
+
+      document.getElementById("myButton2").addEventListener("click", (e) => {
+        console.log("My Button 2, 2nd Listener");
+      });
+
+      // e.stopImmediatePropogation()
+      document.getElementById("outerDiv3").addEventListener("click", (e) => {
+        console.log("Outer Div 3");
+      });
+
+      document.getElementById("myButton3").addEventListener("click", (e) => {
+        e.stopImmediatePropagation();
+        console.log(
+          "My Button 3, 1st Listener. Prevented Parent + 2nd Listener from trigger"
+        );
+      });
+
+      document.getElementById("myButton3").addEventListener("click", (e) => {
+        console.log("My Button 3, 2nd Listener");
+      });
+    </script>
+  </body>
+</html>
