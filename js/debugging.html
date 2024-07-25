@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debugging</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2><i>Debugging</i></h2>
+    <ul>
+      <li>
+        Browser DevTools: F12 or Ctrl+Shift+I (Inspect, Console, Sources,
+        Network, Performance, Memory).
+      </li>
+      <li>IDE Debuggers</li>
+      <li>
+        Console Logging:
+        <pre><code>
+        console.log("Debug message:", variable);
+        </code></pre>
+      </li>
+      <li>
+        Breakpoints:
+        <ul>
+          <li>
+            Set breakpoints in DevTools or IDE to pause execution and inspect
+            variables.
+          </li>
+          <li>Use debugger; in code to trigger breakpoints.</li>
+        </ul>
+      </li>
+      <li>
+        Use ESLint and Prettier to enforce coding standards and catch errors
+        early.
+      </li>
+      <li>
+        Error Handling:
+        <pre><code>
+        try {
+          riskyOperation();
+        } catch (error) {
+            console.error("Error:", error);
+        }
+      </code></pre>
+      </li>
+    </ul>
+    <script>
+      function createCounter(n) {
+        let count = n;
+
+        function increment() {
+          count++;
+        }
+        return function closuer() {
+          console.log("Parent variable " + count);
+          increment();
+          console.log("Parent variable after increment " + count);
+        };
+      }
+
+      const counter = createCounter(5);
+      counter();
+    </script>
+  </body>
+</html>

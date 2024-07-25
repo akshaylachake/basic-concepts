@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document vs Window</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2><i>window</i></h2>
+    <ul>
+      <li>
+        Global Object: The <b>'window'</b> object represents the browser's
+        window. It is the global object in the browser environment, meaning all
+        global variables and functions are properties of the
+        <b>'window'</b> object.
+      </li>
+      <li>
+        Properties and Methods:
+        <ul>
+          <li>window.alert(): Displays an alert dialog.</li>
+          <li>
+            window.setTimeout(): Calls a function or executes a code snippet
+            after a specified delay.
+          </li>
+          <li>
+            window.setInterval(): Repeats a function or code snippet with a
+            fixed time delay between each call.
+          </li>
+          <li>
+            window.location: Provides information about the current URL and
+            methods to navigate to different URLs.
+          </li>
+          <li>
+            window.innerWidth and window.innerHeight: Get the inner width and
+            height of the window.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h2><i>document</i></h2>
+    <ul>
+      <li>
+        DOM Interface: The <b>'document'</b> object represents the HTML document
+        loaded in the window. It provides methods and properties to interact
+        with the DOM (Document Object Model).
+      </li>
+      <li>
+        Properties and Methods:
+        <ul>
+          <li>document.getElementById(): Returns an element by its ID.</li>
+          <li>
+            document.querySelector(): Returns the first element that matches a
+            CSS selector.
+          </li>
+          <li>document.createElement(): Creates a new element.</li>
+          <li>
+            document.body: Represents the <b>'body'</b> element of the document.
+          </li>
+          <li>document.title: Gets or sets the title of the document.</li>
+        </ul>
+      </li>
+    </ul>
+    <h2><i>Key Differences</i></h2>
+    <ol>
+      <li>Scope:</li>
+      <ul>
+        <li>
+          window: Represents the entire browser window, including the outer
+          frame and everything inside it.
+        </li>
+        <li>
+          document: Represents the content (HTML) of the webpage loaded in the
+          browser window.
+        </li>
+      </ul>
+      <li>Global Context:</li>
+      <ul>
+        <li>
+          window: Global context for the entire web page; any global variables
+          or functions are actually properties of the window object. document:
+          Acts as the entry point to the content of the web page (DOM).
+        </li>
+      </ul>
+      <li>Usage:</li>
+      <ul>
+        <li></li>
+        <li>
+          Use window for actions that involve the browser window itself (e.g.,
+          controlling size, opening new windows, setting timeouts).
+        </li>
+        <li>
+          Use document for actions that involve manipulating the HTML content
+          (e.g., selecting elements, modifying content).
+        </li>
+      </ul>
+    </ol>
+  </body>
+</html>
