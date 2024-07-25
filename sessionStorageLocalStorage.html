@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Storage & Local Storage</title>
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2><i>Session Storage</i></h2>
+    <ul>
+      <li>
+        Scope: Data is stored for the duration of the page session. This means
+        that the data is available only for the current browser tab or window.
+        Once the tab or window is closed, the data is deleted.
+      </li>
+      <li>
+        Use Case: Useful for storing temporary data that should not persist
+        beyond the current session, such as form data or state information that
+        should be reset when the user closes the tab.
+      </li>
+      <li>
+        Storage Capacity: Typically around 5MB, but this can vary between
+        browsers.
+      </li>
+    </ul>
+    <h2><i>Local Storage</i></h2>
+    <ul>
+      <li>
+        Scope: Data is stored with no expiration time. This means that the data
+        is available even after the browser is closed and reopened. The data
+        persists across sessions, tabs, and windows.
+      </li>
+      <li>
+        Use Case: Ideal for storing data that should persist between sessions,
+        such as user preferences, login tokens, or any other long-term data.
+      </li>
+      <li>
+        Storage Capacity: Typically around 5MB, but this can vary between
+        browsers.
+      </li>
+    </ul>
+    <script>
+      // session storage
+      // Store data
+      sessionStorage.setItem("key", "Session Storage Set");
+
+      // Retrieve data
+      let data = sessionStorage.getItem("key");
+      console.log(data); // Output: 'value'
+
+      // Remove data
+      sessionStorage.removeItem("key");
+
+      // Clear all data
+      sessionStorage.clear();
+
+      // local storage
+      // Store data
+      localStorage.setItem("key", "Local Storage Set");
+
+      // Retrieve data
+      let data2 = localStorage.getItem("key");
+      console.log(data2); // Output: 'value'
+
+      // Remove data
+      localStorage.removeItem("key");
+
+      // Clear all data
+      localStorage.clear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async/await</title>
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2><i>async ... await</i></h2>
+    <ul>
+      <li>
+        <b>'async'</b> and <b>'await'</b> are keywords in JavaScript that help
+        you work with asynchronous code in a more synchronous fashion.
+      </li>
+      <li>
+        <b>'async'</b> function: Declares a function that returns an
+        <b>'AsyncFunction'</b> object. When called, it returns a Promise. If the
+        async function returns a value, the Promise will be resolved with that
+        value. If the async function throws an error, the Promise will be
+        rejected with that error.
+      </li>
+      <li>
+        <b>'await'</b> expression: Pauses the execution of an async function and
+        waits for the Promise to resolve or reject. It can only be used inside
+        an async function.
+      </li>
+    </ul>
+    <script>
+      // A function that returns a promise which resolves after 2 seconds
+      function resolveAfter2Seconds() {
+        return new Promise((resolve) => {
+          console.log("resolveAfter2Seconds() initiated");
+
+          setTimeout(() => {
+            resolve("resolved");
+          }, 2000);
+        });
+      }
+
+      // Using async and await
+      async function asyncCall() {
+        console.log("asyncCall() start");
+        const result = await resolveAfter2Seconds(); // Wait for the promise to resolve
+        console.log(result); // Log the result
+        console.log("asyncCall() end");
+      }
+
+      asyncCall();
+    </script>
+  </body>
+</html>
