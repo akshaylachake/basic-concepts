@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lists</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2><i>Lists</i></h2>
+    <h3>Ordered Lists (&lt;ol&gt;)</h3>
+    <ul>
+      <li>
+        Ordered lists are used to display a list of items where the order of the
+        items is important. Each item in the list is numbered.
+        <pre><code>
+        &lt;ol&gt;
+            &lt;li&gt;First item&lt;/li&gt;
+            &lt;li&gt;Second item&lt;/li&gt;
+            &lt;li&gt;Third item&lt;/li&gt;
+        &lt;/ol&gt;
+        </code></pre>
+        Attributes:
+        <ul>
+          <li>type: Specifies the type of numbering (e.g., 1, A, a, I, i).</li>
+          <li>start: Specifies the starting number.</li>
+          <li>reversed: Specifies that the list order should be reversed.</li>
+        </ul>
+
+        Example with Attributes:
+        <pre><code>
+        &lt;ol type="A" start="3" reversed&gt;
+            &lt;li&gt;Third item&lt;/li&gt;
+            &lt;li&gt;Second item&lt;/li&gt;
+            &lt;li&gt;First item&lt;/li&gt;
+        &lt;/ol&gt;
+        </code></pre>
+      </li>
+    </ul>
+    <h3>Unordered Lists (&lt;ul&gt;)</h3>
+    <ul>
+      <li>
+        Unordered lists are used to display a list of items where the order of
+        the items is not important. Each item in the list is marked with a
+        bullet point.
+        <pre><code>
+        &lt;ul&gt;
+            &lt;li&gt;Item one&lt;/li&gt;
+            &lt;li&gt;Item two&lt;/li&gt;
+            &lt;li&gt;Item three&lt;/li&gt;
+        &lt;/ul&gt;
+        </code></pre>
+        Attributes:
+        <ul>
+          <li>
+            type: Specifies the type of bullet (e.g., disc, circle, square).
+          </li>
+        </ul>
+        Example with Attributes:
+        <pre><code>
+        &lt;ul style="list-style-type: circle;"&gt;
+            &lt;li&gt;Circle bullet item&lt;/li&gt;
+            &lt;li&gt;Circle bullet item&lt;/li&gt;
+        &lt;/ul&gt;
+        </code></pre>
+      </li>
+    </ul>
+    <h3>Definition Lists (&lt;dl&gt;)</h3>
+    <ul>
+      <li>
+        Definition lists are used to display a list of terms and their
+        definitions. Each term is wrapped in a &lt;dt&gt; element, and each
+        definition is wrapped in a &lt;dd&gt; element. Example:
+        <pre><code>
+        &lt;dl&gt;
+            &lt;dt&gt;HTML&lt;/dt&gt;
+            &lt;dd&gt;A markup language for creating web pages.&lt;/dd&gt;
+            &lt;dt&gt;CSS&lt;/dt&gt;
+            &lt;dd&gt;A stylesheet language for styling web pages.&lt;/dd&gt;
+        &lt;/dl&gt;
+        </code></pre>
+      </li>
+    </ul>
+  </body>
+</html>

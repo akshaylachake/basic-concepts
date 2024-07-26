@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datalist</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h3>Datalists</h3>
+    <ul>
+      <li>
+        The &lt;datalist&gt; element in HTML is used to provide an
+        "autocomplete" feature for an &lt;input&gt; element. It contains a set
+        of &lt;option&gt; elements that represent the available choices. When
+        the user starts typing in the input field, the browser can display a
+        list of options to choose from, based on what the user has typed so far.
+      </li>
+      <li>
+        <b>id</b> The unique identifier for the &lt;datalist&gt; element. This
+        is referenced by the <b>'list'</b> attribute in the associated
+        &lt;input&gt; element.
+        <pre><code>
+        &lt;form&gt;
+            &lt;label for="browser"&gt;Choose your browser:&lt;/label&gt;
+            &lt;input list="browsers" id="browser" name="browser" placeholder="Start typing..."&gt;
+            &lt;datalist id="browsers"&gt;
+                &lt;option value="Chrome"&gt;
+                &lt;option value="Firefox"&gt;
+                &lt;option value="Safari"&gt;
+                &lt;option value="Edge"&gt;
+                &lt;option value="Opera"&gt;
+            &lt;/datalist&gt;
+            &lt;button type="submit"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+        </code></pre>
+      </li>
+    </ul>
+  </body>
+</html>
