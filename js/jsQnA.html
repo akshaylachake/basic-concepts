@@ -63,11 +63,15 @@
     <h2>Find the output</h2>
     <pre>
     <code>
+    console.log("start");
     setTimeout(()=>console.log('1'),0);
     Promise.resolve().then(()=>console.log('2'));
     setTimeout(()=>console.log('3'),0);
+    console.log("end");
 
     // output
+    start
+    end
     2
     1
     3
@@ -77,6 +81,29 @@
       <li>
         Execution Breakdown
         <ul>
+          <li>
+            Components:
+            <ol>
+              <li>Call Stack: Tracks function calls in a LIFO order.</li>
+              <li>
+                Web APIs: Handle asynchronous tasks like timers and
+                HTTPrequests.
+              </li>
+              <li>Task Queue: Stores tasks like setTimeout and UI events.</li>
+              <li>
+                Microtask Queue: Handles high-priority tasks like Promise
+                callbacks.
+              </li>
+            </ol>
+          </li>
+          <li>
+            Execution Order:
+            <ol>
+              <li>Synchronous code executes first (call stack).</li>
+              <li>Microtasks are processed next.</li>
+              <li>Macrotasks are executed afterward.</li>
+            </ol>
+          </li>
           <li>
             Synchronous Code: All synchronous code runs first. There is no
             synchronous code before the setTimeout and Promise in this example,
@@ -170,5 +197,22 @@
       </li>
     </ul>
     <hr />
+    <pre>
+    <code> x = 7 + "8"; console.log(x); // output 78 </code>
+    </pre>
+    <ul>
+      <li>
+        In non-strict mode:<br />
+        If you don’t declare a variable and just assign it, JavaScript
+        implicitly creates a global variable named x. This is generally
+        considered bad practice, because it pollutes the global scope and can
+        lead to bugs.
+      </li>
+      <li>
+        In strict mode ("use strict"): <br />
+        You would get a ReferenceError:
+      </li>
+    </ul>
+    <script></script>
   </body>
 </html>
