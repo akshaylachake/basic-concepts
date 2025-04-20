@@ -213,6 +213,117 @@
         You would get a ReferenceError:
       </li>
     </ul>
+    <hr />
+    <pre>
+    <code> 
+      var arr = [];
+      arr[0] = 1;
+      arr[1] = 2;
+      arr.foo = 3
+      console.log(arr.length); 
+      
+      // output 
+      2 
+    </code>
+    </pre>
+    <ul>
+      <li>
+        The code creates an array named arr and assigns the values 'a' and 'b'
+        to its first two elements. The line arr.foo = 'c' adds a property named
+        'foo' to the array object and assigns it the value 'c'. However, this
+        does not affect the length of the array, which remains 2. Therefore, the
+        alert(arr.length) statement will display the value 2.
+      </li>
+    </ul>
+    <hr />
+    <pre>
+    <code> 
+      4+2+3+"1"
+      
+      // output 
+      91
+    </code>
+    </pre>
+    <ul>
+      <li>
+        The statement "10 4321 91" is not a valid mathematical expression. It
+        appears to be a list of numbers separated by spaces. Therefore, it does
+        not evaluate to a specific value. The answer "91" is likely just the
+        last number in the list, but it does not represent the evaluation of the
+        statement.
+      </li>
+    </ul>
+    <hr />
+    <pre>
+    <code> 
+      function foo(){}
+      delete foo.length;
+      console.log(typeOf foo.length);
+
+      // output 
+      Number
+    </code>
+    </pre>
+    <ul>
+      <li>
+        Step-by-step:
+        <br />
+        1. function foo(){} You define a function named foo.
+        <br />
+        2. foo.length This is a built-in property of functions. It returns the
+        number of expected arguments (parameters) of the function. Since foo has
+        no parameters, foo.length === 0.
+        <br />
+        3. delete foo.length You're trying to delete a built-in property. But...
+        length is non-configurable, so: The delete fails silently in non-strict
+        mode. It throws an error in strict mode.
+        <br />
+        4. console.log(typeof foo.length) The delete didn't work, so foo.length
+        is still there. So you're logging: typeOf 0 i.e Number
+      </li>
+    </ul>
+    <hr />
+    <pre>
+    <code>
+      <img src="../assets/q3.jpg" /><br />
+
+      //output
+      3, 1
+    </code>
+    </pre>
+    <hr />
+    <pre>
+    <code>
+      <img src="../assets/q4.jpg" /><br />
+
+      //output
+      3
+    </code>
+    </pre>
+    <hr />
+    <pre>
+    <code>
+      What value is alerted?  
+      <img src="../assets/q10.jpg" /><br />
+
+      // 4
+    </code>
+    </pre>
+    <ul>
+      <li>
+        The code defines a global variable x with a value of 4 and an object obj
+        with a property x set to 3 and a method bar(). Inside bar(), a local
+        variable x is declared with a value of 2, and a setTimeout() function is
+        called. The setTimeout() function defines another nested function that
+        declares a local variable x with a value of 1 and then alerts the value
+        of this.x. When obj.bar() is called, the setTimeout() function schedules
+        the nested function to be executed after 1000 milliseconds (1 second).
+        When the nested function is executed, the value of this refers to the
+        global window object, not the obj object. Therefore, this.x refers to
+        the global variable x, which has a value of 4. Hence, the value alerted
+        is 4.
+      </li>
+    </ul>
     <script></script>
   </body>
 </html>
