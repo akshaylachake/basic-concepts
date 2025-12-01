@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <a href="/"><< Back</a>
+    <h2><i>Promise</i></h2>
+    <ul>
+      <li>
+        A Promise is an object that represents the eventual completion or
+        failure of an asynchronous operation.
+      </li>
+    </ul>
+    <h3><i>A Promise has three states</i></h3>
+    <ul>
+      <li>pending — initial state</li>
+      <li>fulfilled — operation succeeded</li>
+      <li>rejected — operation failed</li>
+    </ul>
+    <h3><i>Key Methods</i></h3>
+    <ul>
+      <li>
+        .then()<br />
+        Runs on success.
+      </li>
+
+      <li>
+        .catch()<br />
+        Runs on error.
+      </li>
+
+      <li>
+        .finally()<br />
+        Runs whether success or error — used for cleanup.
+      </li>
+
+      <li>
+        Promise.all()<br />
+        Runs tasks in parallel → resolves when all succeed. Rejects on first
+        failure.
+      </li>
+
+      <li>
+        Promise.race()<br />
+        Resolves/rejects with the first settled Promise.
+      </li>
+
+      <li>
+        Promise.allSettled()<br />
+        Waits for all Promises to finish regardless of pass/fail.
+      </li>
+
+      <li>
+        Promise.any()<br />
+        Resolves with the first successful Promise (ignores rejections).
+      </li>
+    </ul>
+  </body>
+</html>

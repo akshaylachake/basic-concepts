@@ -11,11 +11,30 @@
     <h2><i>Closures</i></h2>
     <ul>
       <li>
-        Closures in JavaScript are functions that have access to variables from
-        their outer lexical environment, even after the outer function has
-        finished executing. Closures “remember” the environment in which they
-        were created.
+        A closure is created when a function remembers the variables from its
+        lexical scope, even after the outer function has finished executing.
       </li>
+    </ul>
+    <code>
+      function outer() {
+        let count = 0;
+        
+        return function inner() {
+          count++;
+          console.log(count);
+        };
+      }
+      
+      const fn = outer();
+      fn(); // 1
+      fn(); // 2
+    </code>
+    <h2><i>Why are closures useful?</i></h2>
+    <ul>
+      <li>Maintain state without using global variables</li>
+      <li>Create private variables</li>
+      <li>Build reusable functions</li>
+      <li>Implement caching and memoization</li>
     </ul>
     <script>
       function createCounter(n) {
